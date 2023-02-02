@@ -3,6 +3,7 @@ import './App.css';
 import Hello from './Components/Hello';
 import Profile from './Components/Profile';
 import DestructureProps from './Components/DestructureProps';
+import EventHandling from './Components/EventHandling';
 function App() {
   return (
     <div className="App">
@@ -13,6 +14,9 @@ function App() {
         <p>Component Child</p>
       </Profile>
       <DestructureProps fname="Ali" lname="Qasemi" age="25"/>
+
+      <EventHandling/>
+      
     </div>
   );
 }
