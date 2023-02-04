@@ -24,7 +24,8 @@ class Counter extends Component{
     render = ()=>{
         return (
             <div>
-                <h1>The Counter is: {this.state.counter}</h1>
+                <h1>Using State: </h1>
+                <h2>The Counter is: {this.state.counter}</h2>
                 <button onClick={()=>this.increment()}>Increment</button>
                 <br/>
                 <button onClick={()=>this.decrement()}>Decrement</button>
