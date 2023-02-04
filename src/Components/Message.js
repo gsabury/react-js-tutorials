@@ -13,7 +13,10 @@ class Message extends Component{
     // ES6 Syntax
     render = ()=>{
         return (
-            <h1>Message from class component</h1>
+            <div>
+                <h1>Simple Example</h1>
+                <p>Message from class component</p>
+            </div>
         );
     }
 }
