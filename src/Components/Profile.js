@@ -1,10 +1,13 @@
 const Profile = (props) =>{
 
     return (
-        <h1>
-            Name: {props.fname} {props.lname} {props.age}
-            {props.children}
-        </h1>
+        <div>
+            <h1>Using Props: </h1>
+            <p>
+                Name: {props.fname} {props.lname} {props.age}
+                {props.children}
+            </p>
+        </div>
     );
 }
 

@@ -7,6 +7,8 @@ import EventHandling from './Components/EventHandling';
 import ConditionalRendering from './Components/ConditionalRendering';
 import ConditionalRendering2 from './Components/ConditionalRendering2';
 import ConditionalRendering3 from './Components/ConditionalRendering3';
+import RenderingListOfObjects from './Components/RenderingListOfObjects';
+import RenderingListOfArray from './Components/RenderingListOfArray';
 function App() {
   return (
     <div className="App">
@@ -23,6 +25,8 @@ function App() {
       <ConditionalRendering></ConditionalRendering>
       <ConditionalRendering2/>
       <ConditionalRendering3/>
+      <RenderingListOfObjects/>
+      <RenderingListOfArray/>
       
     </div>
   );

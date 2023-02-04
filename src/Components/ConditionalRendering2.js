@@ -4,16 +4,17 @@ const ConditionalRendering2 = () =>{
     const [display] = useState(true);
     let output;
     if(display){
-        output =  <div>
-                        <h1>If the Conditiona is true</h1>
-                    </div>
+        output = (<p>If the Conditiona is true</p>)
     }else{
-        output =  <div>
-                        <h1>If the Conditiona is false</h1>
-                    </div>
+        output = (<p>If the Conditiona is false</p>)
     }
 
-    return output;
+    return (
+            <div>
+                <h1>Conditional Rendering (Using Variable)</h1>
+                {output}
+            </div>
+        );
 }
 
 export default ConditionalRendering2;

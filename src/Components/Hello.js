@@ -10,7 +10,10 @@ function Hello(){
 // ES6 Syntax
 const Hello = ()=>{
     return(
-        <h1>Hello Component </h1>
+        <div>
+            <h1>First Example:  </h1>
+            <p>Hello Component </p>
+        </div>
     );
 }
 export default Hello;
