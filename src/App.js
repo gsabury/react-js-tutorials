@@ -4,6 +4,7 @@ import Message from './Components/Message';
 import Profile from './Components/Profile';
 import DestructureProps from './Components/DestructureProps';
 import EventHandling from './Components/EventHandling';
+import Form from './Components/Form';
 function App() {
   return (
     <div className="App">
@@ -13,6 +14,8 @@ function App() {
      <Profile fname="Mahmood" lname="Sabeghi" age="28"/>
      <DestructureProps fname="Ali" lname="Qasemi" age="25"/>
      <EventHandling />
+
+     <Form/>
     </div>
   );
 }
