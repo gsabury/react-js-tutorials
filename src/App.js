@@ -9,6 +9,10 @@ import ConditionalRendering2 from './Components/ConditionalRendering2';
 import ConditionalRendering3 from './Components/ConditionalRendering3';
 import RenderingListOfObjects from './Components/RenderingListOfObjects';
 import RenderingListOfArray from './Components/RenderingListOfArray';
+import SimpleTodoApp from './Components/SimpleTodoApp';
+import InlineStyleComponent from './Components/InlineStyleComponent';
+import StyleSheetComponent from './Components/StyleSheetComponent';
+import CssModuleComponent from './Components/CssModuleComponent';
 function App() {
   return (
     <div className="App">
@@ -27,6 +31,15 @@ function App() {
       <ConditionalRendering3/>
       <RenderingListOfObjects/>
       <RenderingListOfArray/>
+
+      <SimpleTodoApp/>
+
+      <InlineStyleComponent/>
+
+      <StyleSheetComponent/>
+
+      <CssModuleComponent/>
+      
       
     </div>
   );
