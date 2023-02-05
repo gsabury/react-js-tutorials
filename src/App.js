@@ -13,6 +13,8 @@ import SimpleTodoApp from './Components/SimpleTodoApp';
 import InlineStyleComponent from './Components/InlineStyleComponent';
 import StyleSheetComponent from './Components/StyleSheetComponent';
 import CssModuleComponent from './Components/CssModuleComponent';
+import FragmentComponent from './Components/FragmentComponent';
+import UsingFragmentInTable from './Components/UsingFragmentInTable';
 function App() {
   return (
     <div className="App">
@@ -39,7 +41,10 @@ function App() {
       <StyleSheetComponent/>
 
       <CssModuleComponent/>
+
+      <FragmentComponent/>
       
+      <UsingFragmentInTable/>
       
     </div>
   );
