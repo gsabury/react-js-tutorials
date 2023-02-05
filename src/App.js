@@ -16,6 +16,7 @@ import CssModuleComponent from './Components/CssModuleComponent';
 import FragmentComponent from './Components/FragmentComponent';
 import UsingFragmentInTable from './Components/UsingFragmentInTable';
 import MemoParent from './Components/MemoParent';
+import UsingPortal from './Components/UsingPortal';
 function App() {
   return (
     <div className="App">
@@ -48,6 +49,8 @@ function App() {
       <UsingFragmentInTable/>
 
       <MemoParent/>
+
+      <UsingPortal/>
       
     </div>
   );
