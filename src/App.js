@@ -15,6 +15,7 @@ import StyleSheetComponent from './Components/StyleSheetComponent';
 import CssModuleComponent from './Components/CssModuleComponent';
 import FragmentComponent from './Components/FragmentComponent';
 import UsingFragmentInTable from './Components/UsingFragmentInTable';
+import MemoParent from './Components/MemoParent';
 function App() {
   return (
     <div className="App">
@@ -45,6 +46,8 @@ function App() {
       <FragmentComponent/>
       
       <UsingFragmentInTable/>
+
+      <MemoParent/>
       
     </div>
   );
