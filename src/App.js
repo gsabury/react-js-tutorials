@@ -1,59 +1,72 @@
-import logo from './logo.svg';
-import './App.css';
-import Hello from './Components/Hello';
-import Profile from './Components/Profile';
-import DestructureProps from './Components/DestructureProps';
-import EventHandling from './Components/EventHandling';
-import ConditionalRendering from './Components/ConditionalRendering';
-import ConditionalRendering2 from './Components/ConditionalRendering2';
-import ConditionalRendering3 from './Components/ConditionalRendering3';
-import RenderingListOfObjects from './Components/RenderingListOfObjects';
-import RenderingListOfArray from './Components/RenderingListOfArray';
-import SimpleTodoApp from './Components/SimpleTodoApp';
-import InlineStyleComponent from './Components/InlineStyleComponent';
-import StyleSheetComponent from './Components/StyleSheetComponent';
-import CssModuleComponent from './Components/CssModuleComponent';
-import FragmentComponent from './Components/FragmentComponent';
-import UsingFragmentInTable from './Components/UsingFragmentInTable';
-import MemoParent from './Components/MemoParent';
-import UsingPortal from './Components/UsingPortal';
-function App() {
-  return (
-    <div className="App">
-      <Hello />
-      <Profile fname="Ghafor" lname="Sabury" age="32"/>
-      <Profile fname="Jumah" lname="Mohammadi" age="30"/>
-      <Profile fname="Mahmood" lname="Sabeghi" age="29">
-        <p>Component Child</p>
-      </Profile>
-      <DestructureProps fname="Ali" lname="Qasemi" age="25"/>
 
-      <EventHandling/>
 
-      <ConditionalRendering></ConditionalRendering>
-      <ConditionalRendering2/>
-      <ConditionalRendering3/>
-      <RenderingListOfObjects/>
-      <RenderingListOfArray/>
+import { Component } from "react";
 
-      <SimpleTodoApp/>
+class App extends Component{
 
-      <InlineStyleComponent/>
+  constructor(){
+    super();
+    this.state = {
+            monsters: [
+                  {id:1, name:"Ghafor"},
+                  {id:2, name:"Mahmood"},
+                  {id:3, name:"Jumah"},
+                  {id:4, name:"Hussain"},
+                  {id:5, name:"Mahdi"},
+            ],
+            searchField:"",
+    }
+  }
 
-      <StyleSheetComponent/>
+  componentDidMount(){
+      // fetch("https://jsonplaceholder.typicode.com/users")
+      // .then(response => response.json())
+      // .then(users => 
+      //   this.setState(()=>{
+      //     return {monsters: users}
+      //   }, ()=>{
+      //     // console.log(this.state.monsters)
+      //   })
+      // )
+  }
 
-      <CssModuleComponent/>
+  // handleInput = (event)=>{
 
-      <FragmentComponent/>
       
-      <UsingFragmentInTable/>
+  // }
 
-      <MemoParent/>
 
-      <UsingPortal/>
-      
-    </div>
-  );
+  render = () => {
+    
+    const filteredMonsters = this.state.monsters.filter((monster)=>{
+        return monster.name.toLocaleLowerCase().includes(this.state.searchField);
+    });
+
+    return (
+      <div className="App">
+            <input 
+              className="search-box"
+              type="search" 
+              placeholder="Search Monsters" 
+              onChange={(event)=>{
+
+              const searchField = event.target.value.toLocaleLowerCase();
+
+              this.setState(()=>{
+                  return {searchField}
+              })
+              
+            }} />
+            {
+              filteredMonsters.map((monster)=>{
+                return <h1 key={monster.id}>{monster.name}</h1>
+              })
+            }
+        
+      </div>
+    );
+  }
+
 }
 
 export default App;
